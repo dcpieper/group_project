@@ -22,6 +22,7 @@ function App() {
        <li><a href="/quiz">Quiz</a></li>
        <li><a href="/community">Community</a></li>
        <li><a href="/leaderboard">Leaderboard</a></li>
+       <p>Hello Jen!</p>
       </ul>
       </nav>
       <h4>smeco ©</h4>

@@ -1,37 +1,27 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import HomepageContainer from './containers /HomepageContainer';
-import NavBar from './components /NavBar';
+import HomepageContainer from "./containers /HomepageContainer";
+import NavBar from "./components /NavBar";
+import Header from "./components /Header";
+import Footer from "./components /Footer";
+import CountriesContainer from "./containers /CountriesContainer";
 
 function App() {
-
   return (
-  <Router >
-  <header>
-    <h1>smeco</h1>
-  </header>
-  
-
-  <HomepageContainer/>
-
-  <footer>
-    <nav>
-      <ul>
-        <li><a href="/home">Home</a></li>
-       <li><a href="/quiz">Quiz</a></li>
-       <li><a href="/community">Community</a></li>
-       <li><a href="/leaderboard">Leaderboard</a></li>
-       <p>Hello Jen!</p>
-      </ul>
-      </nav>
-      <h4>smeco ©</h4>
-  </footer>
-
-
-
-  </Router>
-  )
+    <Router>
+      <Header />
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<HomepageContainer />} />
+        {/* <Route path="/quiz" element={<QuizContainer />} /> */}
+        {/* <Route path="/community" element={<CommunityContainer />} /> */}
+        <Route path="/countries" element={<CountriesContainer />} />
+        {/* <Route path="/leaderBoard" element={<LeaderBoardContainer />} /> */}
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;

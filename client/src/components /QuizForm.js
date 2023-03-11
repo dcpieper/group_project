@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const QuizForm = ({ getQuizResult }) => {
+const QuizForm = ({ getQuizResult, findFact }) => {
   const [name, setName] = useState(null);
   const [country, setCountry] = useState(null);
   const [detailsFormComplete, setDetailsFormComplete] = useState(false);
@@ -60,8 +60,10 @@ const QuizForm = ({ getQuizResult }) => {
         questionFiveScore
     );
     setQuizFormComplete(true);
+
   };
   getQuizResult(totalScore);
+  findFact();
 
   const handleCheckBoxChange = (item, setItem, question, setQuestion) => {
     if (item === false) {

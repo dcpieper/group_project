@@ -426,6 +426,7 @@ const QuizForm = ({ getQuizResult }) => {
         <h2>Thank you for taking the quiz. Here are your results:</h2>
       ) : null}
     </div>
+    
   );
 };
 export default QuizForm;

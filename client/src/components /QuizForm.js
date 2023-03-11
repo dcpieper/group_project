@@ -6,11 +6,21 @@ const QuizForm = ({ getQuizResult }) => {
   const [detailsFormComplete, setDetailsFormComplete] = useState(false);
   const [questionOneScore, setQuestionOneScore] = useState(0);
   const [questionTwoScore, setQuestionTwoScore] = useState(0);
-  const [questionThreeScore, setQuestionThreeScore] = useState(0);
+  const [questionThreeScore, setQuestionThreeScore] = useState(5);
   const [questionFourScore, setQuestionFourScore] = useState(0);
-  const [questionFiveScore, setQuestionFiveScore] = useState(0);
+  const [questionFiveScore, setQuestionFiveScore] = useState(5);
   const [totalScore, setTotalScore] = useState(0);
   const [quizFormComplete, setQuizFormComplete] = useState(false);
+  const [glass, setGlass] = useState(false);
+  const [paper, setPaper] = useState(false);
+  const [food, setFood] = useState(false);
+  const [tins, setTins] = useState(false);
+  const [plastic, setPlastic] = useState(false);
+  const [double, setDouble] = useState(false);
+  const [lightbulbs, setLightbulbs] = useState(false);
+  const [loft, setLoft] = useState(false);
+  const [solar, setSolar] = useState(false);
+  const [boiler, setBoiler] = useState(false);
 
   const handleUserNameChange = (event) => {
     setName(event.target.value);
@@ -52,12 +62,20 @@ const QuizForm = ({ getQuizResult }) => {
     setQuizFormComplete(true);
   };
   getQuizResult(totalScore);
-  // console.log(questionOneScore);
-  // console.log(questionTwoScore);
-  // console.log(questionThreeScore);
-  // console.log(questionFourScore);
-  // console.log(questionFiveScore);
-  // console.log(totalScore);
+
+  const handleCheckBoxChange = (item, setItem, question, setQuestion) => {
+    if (item === false) {
+      setItem(true);
+      setQuestion(question - 1);
+    } else {
+      setItem(false);
+      setQuestion(question + 1);
+    }
+  };
+
+  console.log(totalScore);
+  console.log(questionThreeScore);
+  console.log(questionFiveScore);
 
   return (
     <div>
@@ -187,19 +205,84 @@ const QuizForm = ({ getQuizResult }) => {
           <div>
             <h4>What do you recycle?</h4>
             <label htmlFor="glass">Glass</label>
-            <input type="checkbox" name="question3" htmlFor="glass" />
+            <input
+              type="checkbox"
+              name="question3"
+              htmlFor="glass"
+              checked={glass}
+              onChange={() => {
+                handleCheckBoxChange(
+                  glass,
+                  setGlass,
+                  questionThreeScore,
+                  setQuestionThreeScore
+                );
+              }}
+            />
 
             <label htmlFor="paper">Paper/Cardboard</label>
-            <input type="checkbox" name="question3" htmlFor="paper" />
+            <input
+              type="checkbox"
+              name="question3"
+              htmlFor="paper"
+              checked={paper}
+              onChange={() => {
+                handleCheckBoxChange(
+                  paper,
+                  setPaper,
+                  questionThreeScore,
+                  setQuestionThreeScore
+                );
+              }}
+            />
 
             <label htmlFor="food">Food</label>
-            <input type="checkbox" name="question3" htmlFor="food" />
+            <input
+              type="checkbox"
+              name="question3"
+              htmlFor="food"
+              checked={food}
+              onChange={() => {
+                handleCheckBoxChange(
+                  food,
+                  setFood,
+                  questionThreeScore,
+                  setQuestionThreeScore
+                );
+              }}
+            />
 
             <label htmlFor="tins">Tins/Cans</label>
-            <input type="checkbox" name="question3" htmlFor="tins" />
+            <input
+              type="checkbox"
+              name="question3"
+              htmlFor="tins"
+              checked={tins}
+              onChange={() => {
+                handleCheckBoxChange(
+                  tins,
+                  setTins,
+                  questionThreeScore,
+                  setQuestionThreeScore
+                );
+              }}
+            />
 
             <label htmlFor="plastics">Plastics</label>
-            <input type="checkbox" name="question3" htmlFor="plastics" />
+            <input
+              type="checkbox"
+              name="question3"
+              htmlFor="plastics"
+              checked={plastic}
+              onChange={() => {
+                handleCheckBoxChange(
+                  plastic,
+                  setPlastic,
+                  questionThreeScore,
+                  setQuestionThreeScore
+                );
+              }}
+            />
           </div>
 
           <div>
@@ -254,19 +337,84 @@ const QuizForm = ({ getQuizResult }) => {
           <div>
             <h4>What do you have in your home?</h4>
             <label htmlFor="double">Double glazing</label>
-            <input type="checkbox" name="question5" htmlFor="double" />
+            <input
+              type="checkbox"
+              name="question5"
+              htmlFor="double"
+              checked={double}
+              onChange={() => {
+                handleCheckBoxChange(
+                  double,
+                  setDouble,
+                  questionFiveScore,
+                  setQuestionFiveScore
+                );
+              }}
+            />
 
             <label htmlFor="lightbulbs">Energy saving light bulbs</label>
-            <input type="checkbox" name="question5" htmlFor="lightbulbs" />
+            <input
+              type="checkbox"
+              name="question5"
+              htmlFor="lightbulbs"
+              checked={lightbulbs}
+              onChange={() => {
+                handleCheckBoxChange(
+                  lightbulbs,
+                  setLightbulbs,
+                  questionFiveScore,
+                  setQuestionFiveScore
+                );
+              }}
+            />
 
             <label htmlFor="loft">Loft insulation</label>
-            <input type="checkbox" name="question5" htmlFor="loft" />
+            <input
+              type="checkbox"
+              name="question5"
+              htmlFor="loft"
+              checked={loft}
+              onChange={() => {
+                handleCheckBoxChange(
+                  loft,
+                  setLoft,
+                  questionFiveScore,
+                  setQuestionFiveScore
+                );
+              }}
+            />
 
             <label htmlFor="solar">Solar panels</label>
-            <input type="checkbox" name="question5" htmlFor="solar" />
+            <input
+              type="checkbox"
+              name="question5"
+              htmlFor="solar"
+              checked={solar}
+              onChange={() => {
+                handleCheckBoxChange(
+                  solar,
+                  setSolar,
+                  questionFiveScore,
+                  setQuestionFiveScore
+                );
+              }}
+            />
 
             <label htmlFor="boiler">Condensing boiler</label>
-            <input type="checkbox" name="question5" htmlFor="boiler" />
+            <input
+              type="checkbox"
+              name="question5"
+              htmlFor="boiler"
+              checked={boiler}
+              onChange={() => {
+                handleCheckBoxChange(
+                  boiler,
+                  setBoiler,
+                  questionFiveScore,
+                  setQuestionFiveScore
+                );
+              }}
+            />
           </div>
 
           <div>

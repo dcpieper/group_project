@@ -23,8 +23,7 @@ const QuizContainer = () => {
   return country.score === quizResult;
     
   })
-  console.log(countryScore)
-  console.log(facts[0].header)
+
 
   const findFact = function(){
     if (quizResult > 0 && quizResult <= 5){

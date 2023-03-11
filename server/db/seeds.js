@@ -186,3 +186,32 @@ db.countries.insertMany([
                 score: 1
         },
 ])
+db.facts.insertMany([
+        {id: 1,
+        score: "Score 1 - 5",
+        header: "You're An Eco Hero!",
+        fact: "Fungi play a protective role in the environment. From digesting minerals out of rock formations to consuming fossil fuel spills, and even de-radiating the environment"
+        },
+        {
+        id: 2,
+        score: "Score 6 - 10",
+        header: "You're Great At Doing Your Bit!",
+        fact: "A Sperm whale's poop offsets carbon in the environment. A whale's poop is very beneficial to the environment as it offsets carbon in the atmosphere. Each whale's poop releases about 50 tonnes of iron annually that promote the growth of phytoplankton, which take in carbon dioxide."
+        },
+        {
+        id: 3,
+        score: "11-15",
+        header: "You're Doing Good!",
+        fact: "Aluminium can be recycled forever! Unlike paper which has a limit as to the times it can be recycled, aluminum can be recycled forever. Recycling a can made of aluminum produces enough energy to run a television for three hours. How many hours and televisions can be run given that we use 80 trillion cans per year?"
+        },
+        {
+        id: 4,
+        header: "There's Room for Improvement.",
+        fact: "The Great Pacific Garbage Patch is a twisting and turning vortex composed of trash and waste. It is twice the size of continental America and contains about 100 million tons of garbage. It stretches from the West Coast of North America to Japan along the Pacific Ocean."
+        },
+        {
+        id: 5,
+        header: "Here's Your 'I Hate The Planet' Crown",
+        fact: "78% of marine mammals are at risk of choking on plastic. Seventy-eight percent of marine mammals are at risk of accidental deaths, such as getting caught in fishing nets. Plastic bags and other plastic garbage that ends up in the ocean kills over 1,000,000 sea animals every year."
+        }
+])

@@ -30,8 +30,8 @@ const createRouter = function (collection) {
   });
 
   router.post('/', (req, res) => {
-    const newBirdData = req.body;
-    collection.insertOne(newBirdData)
+    const newData = req.body;
+    collection.insertOne(newData)
     .then(data => res.json(data))
         .catch((err) => {
         console.error(err);

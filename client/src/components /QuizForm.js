@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { postResult } from "../services/ResultServices";
 
 const QuizForm = ({ getQuizResult, findFact }) => {
   const [name, setName] = useState(null);
@@ -21,6 +22,13 @@ const QuizForm = ({ getQuizResult, findFact }) => {
   const [loft, setLoft] = useState(false);
   const [solar, setSolar] = useState(false);
   const [boiler, setBoiler] = useState(false);
+  const [formData, setFormData] = useState(
+    {
+      name: "",
+      score: 0,
+      country: ""
+}
+  );
 
 
   
@@ -56,8 +64,17 @@ const QuizForm = ({ getQuizResult, findFact }) => {
         questionFourScore +
         questionFiveScore
     );
-    setQuizFormComplete(true);
-  
+    setQuizFormComplete(true); 
+    formData.name = name;
+    formData.country = country;
+    formData.score = totalScore;
+    setFormData(formData);
+    postResult(formData);
+    setFormData( {
+      name: "",
+      score: 0,
+      country: ""
+});
   };
   findFact();
   getQuizResult(totalScore);

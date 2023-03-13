@@ -1,7 +1,10 @@
 
 const Header = () => {
   return (
-    <div>smeco</div>
+    <div className="header"><p>smeco</p>
+    <img src='../../images/earthgif.gif'/>
+    </div>
+
   )
 }
 

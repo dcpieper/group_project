@@ -13,8 +13,8 @@ import CommunityContainer from "./containers /CommunityContainer";
 function App() {
   return (
     <Router>
-      <Header />
       <NavBar />
+      <Header />
       <Routes>
         <Route path="/" element={<HomepageContainer />} />
         <Route path="/quiz" element={<QuizContainer />} />

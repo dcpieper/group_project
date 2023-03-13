@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const QuizForm = ({ getQuizResult }) => {
+const QuizForm = ({ getQuizResult, findFact }) => {
   const [name, setName] = useState(null);
   const [country, setCountry] = useState(null);
   const [detailsFormComplete, setDetailsFormComplete] = useState(false);
@@ -21,6 +21,9 @@ const QuizForm = ({ getQuizResult }) => {
   const [loft, setLoft] = useState(false);
   const [solar, setSolar] = useState(false);
   const [boiler, setBoiler] = useState(false);
+
+
+  
 
   const handleUserNameChange = (event) => {
     setName(event.target.value);
@@ -54,7 +57,9 @@ const QuizForm = ({ getQuizResult }) => {
         questionFiveScore
     );
     setQuizFormComplete(true);
+  
   };
+  findFact();
   getQuizResult(totalScore);
 
   const handleCheckBoxChange = (item, setItem, question, setQuestion) => {
@@ -75,7 +80,7 @@ const QuizForm = ({ getQuizResult }) => {
     <div>
       {detailsFormComplete ? (
         <h2>
-          Hello {name} from {country}. {quizFormComplete && detailsFormComplete ? <p></p>: <p>Please begin the quiz below.</p>}
+          Hello {name} from {country}. {quizFormComplete ? <p></p>: <p>Please begin the quiz below.</p>}
         </h2>
       ) : (
         <form onSubmit={handleUserDetailsSubmit}>

@@ -9,6 +9,7 @@ const QuizContainer = () => {
   const [facts, setFacts] = useState([])
   const [header, setHeader] = useState(null);
   const [fact, setFact] = useState(null);
+  
 
   useEffect(() => {
     getCountries().

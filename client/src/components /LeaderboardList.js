@@ -5,7 +5,6 @@ import LeaderboardItem from './LeaderboardItem';
 
 const LeaderboardList = () => {
     const[results, setResults] = useState([]);
-    const[sortResult, setSortResult] = useState([]);
 
     useEffect (() => {
         getResults().then((allResults) => {
@@ -14,30 +13,17 @@ const LeaderboardList = () => {
     }, [])
 
     const sortScore = function(){
-        const result1 = 
-        resultNodes.reverse(function(a,b){
-            return a-b;
-        })
-        console.log(result1)
-        setSortResult(result1)
+       setResults(results.sort(function(a, b){
+        return a.score - b.score
+       }))
     }
 
-    // console.log(results)
-
-    const resultNodesSorted = sortResult.map((result, index) => {
-        return <LeaderboardItem key={index} result={result} sortScore={sortScore}/>
-    })
     const resultNodes = results.map((result, index) => {
-        return <LeaderboardItem key={index} result={result} sortScore={sortScore}/>
+        return <LeaderboardItem key={index} result={result}  />
     })
 
-    // const sortScore = function(){
-    //     resultNodes.sort(function(a,b){
-    //         return a-b;
-    //     })
 
     return (
-        <div>
             <table>
                 <thead>
                     <tr>
@@ -46,12 +32,9 @@ const LeaderboardList = () => {
                     <th>Country</th>
                     </tr>
                 </thead>
-                <tbody>{resultNodes}</tbody>
+                <tbody>{resultNodes}
+                </tbody>
             </table>
-
-            
-        </div>
     )
 }
-
-export default LeaderboardList
+export default LeaderboardList;

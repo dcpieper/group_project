@@ -55,16 +55,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
     setQuestionFourScore(parseInt(event.target.value));
   };
 
-  const handleQuizFormSubmit = (event) => {
-    event.preventDefault();
-    setTotalScore(
-      questionOneScore +
-        questionTwoScore +
-        questionThreeScore +
-        questionFourScore +
-        questionFiveScore
-    );
-    setQuizFormComplete(true); 
+  const setResultData = () => {
     formData.name = name;
     formData.country = country;
     formData.score = totalScore;
@@ -75,10 +66,25 @@ const QuizForm = ({ getQuizResult, findFact }) => {
       score: 0,
       country: ""
 });
+  }
+
+  const handleQuizFormSubmit = (event) => {
+    event.preventDefault();
+    setTotalScore(
+      questionOneScore +
+        questionTwoScore +
+        questionThreeScore +
+        questionFourScore +
+        questionFiveScore
+    )
+    setQuizFormComplete(true); 
   };
   findFact();
   getQuizResult(totalScore);
-
+  
+const addData = () => {
+  setResultData();
+}
   const handleCheckBoxChange = (item, setItem, question, setQuestion) => {
     if (item === false) {
       setItem(true);
@@ -441,6 +447,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
       {quizFormComplete ? (
         <h2>Thank you for taking the quiz. Here are your results:</h2>
       ) : null}
+      <button onClick={addData}><a href="/leaderboard">Click here to log your results and add your score to the leaderboard</a></button>
     </div>
     
   );

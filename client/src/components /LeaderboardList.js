@@ -5,6 +5,8 @@ import LeaderboardItem from './LeaderboardItem';
 
 const LeaderboardList = () => {
     const[results, setResults] = useState([]);
+    const [sortNames, setSortNames] = useState([])
+    const [sortCountries, setSortCountries] = useState([])
 
     useEffect (() => {
         getResults().then((allResults) => {
@@ -13,9 +15,11 @@ const LeaderboardList = () => {
     }, [])
 
     const sortScore = function(){
-       setResults(results.sort(function(a, b){
+        const resultsCopy = [...results];
+        resultsCopy.sort((a, b)=>{
         return a.score - b.score
-       }))
+       })
+       setResults(resultsCopy)
     }
 
     const resultNodes = results.map((result, index) => {

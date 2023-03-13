@@ -22,16 +22,11 @@ const QuizForm = ({ getQuizResult, findFact }) => {
   const [loft, setLoft] = useState(false);
   const [solar, setSolar] = useState(false);
   const [boiler, setBoiler] = useState(false);
-  const [formData, setFormData] = useState(
-    {
-      name: "",
-      score: 0,
-      country: ""
-}
-  );
-
-
-  
+  const [formData, setFormData] = useState({
+    name: "",
+    score: 0,
+    country: "",
+  });
 
   const handleUserNameChange = (event) => {
     setName(event.target.value);
@@ -64,17 +59,18 @@ const QuizForm = ({ getQuizResult, findFact }) => {
         questionFourScore +
         questionFiveScore
     );
-    setQuizFormComplete(true); 
+
+    setQuizFormComplete(true);
     formData.name = name;
-    formData.country = country;
     formData.score = totalScore;
+    formData.country = country;
     setFormData(formData);
     postResult(formData);
-    setFormData( {
+    setFormData({
       name: "",
       score: 0,
-      country: ""
-});
+      country: "",
+    });
   };
   findFact();
   getQuizResult(totalScore);
@@ -97,7 +93,8 @@ const QuizForm = ({ getQuizResult, findFact }) => {
     <div>
       {detailsFormComplete ? (
         <h2>
-          Hello {name} from {country}. {quizFormComplete ? <p></p>: <p>Please begin the quiz below.</p>}
+          Hello {name} from {country}.{" "}
+          {quizFormComplete ? <p></p> : <p>Please begin the quiz below.</p>}
         </h2>
       ) : (
         <form onSubmit={handleUserDetailsSubmit}>
@@ -442,7 +439,6 @@ const QuizForm = ({ getQuizResult, findFact }) => {
         <h2>Thank you for taking the quiz. Here are your results:</h2>
       ) : null}
     </div>
-    
   );
 };
 export default QuizForm;

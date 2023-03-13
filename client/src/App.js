@@ -8,6 +8,7 @@ import Footer from "./components /Footer";
 import CountriesContainer from "./containers /CountriesContainer";
 import QuizContainer from "./containers /QuizContainer";
 import LeaderboardContainer from "./containers /LeaderboardContainer";
+import CommunityContainer from "./containers /CommunityContainer";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomepageContainer />} />
         <Route path="/quiz" element={<QuizContainer />} />
-        {/* <Route path="/community" element={<CommunityContainer />} /> */}
+        <Route path="/community" element={<CommunityContainer />} />
         <Route path="/countries" element={<CountriesContainer />} />
         <Route path="/leaderboard" element={<LeaderboardContainer />} />
       </Routes>

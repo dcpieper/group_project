@@ -4,7 +4,7 @@ db.dropDatabase();
 db.results.insertMany([
         {
                 name: "Bob Saget",
-                score: 4,
+                score: 15,
                 country: "USA"
         },
         {

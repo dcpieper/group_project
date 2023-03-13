@@ -1,10 +1,13 @@
 import React from 'react'
 
-const LeaderboardItem = () => {
+const LeaderboardItem = ({result}) => {
     return (
-        <div>
+        <tr>
+            <td>{result.score}</td> 
+            <td>{result.name}</td>
+            <td>{result.country}</td>
             
-        </div>
+        </tr>
     )
 }
 

@@ -36,6 +36,7 @@ serif; */
   color: rgb(78, 122, 78);
 }
 
+
 .header {
   text-align: center;
   font-family: 'Nunito',
@@ -130,4 +131,79 @@ serif; */
 .homepage-container a {
   text-decoration: none;
   color: white;
+}
+
+.quiz-container {
+  margin: 0 auto;
+  background-color: #D2DCE5;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+.quiz-container img {
+  position: fixed;
+  z-index: -1;
+  margin-right: -60px;
+  width: 400px;
+  right: 0;
+  bottom: 0;
+}
+
+.quiz-form {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.548);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.detail-form {
+  text-align: center;
+}
+
+.detail-form input {
+  margin: 10px;
+}
+
+.detail-form .text-input {
+  width: 200px;
+  height: 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(117, 181, 117);
+  padding: 5px;
+  font-size: 16px;
+}
+
+.detail-form .button {
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid rgb(117, 181, 117);
+  background-color: ghostwhite;
+
+}
+
+.capitalise {
+  text-transform: capitalize;
+}
+
+.quiz-questions input,
+.quiz-questions label {
+  margin: 5px;
+  font-size: 16px;
+}
+
+.quiz-questions {
+  font-size: 22px;
+}
+
+
+
+
+footer {
+  width: 100vw;
 }

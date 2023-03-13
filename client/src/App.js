@@ -14,7 +14,6 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <Header />
       <Routes>
         <Route path="/" element={<HomepageContainer />} />
         <Route path="/quiz" element={<QuizContainer />} />

@@ -40,14 +40,8 @@ const QuizForm = ({ getQuizResult }) => {
   const handleQuestionTwo = (event) => {
     setQuestionTwoScore(parseInt(event.target.value));
   };
-  const handleQuestionThree = (event) => {
-    setQuestionThreeScore(parseInt(event.target.value));
-  };
   const handleQuestionFour = (event) => {
     setQuestionFourScore(parseInt(event.target.value));
-  };
-  const handleQuestionFive = (event) => {
-    setQuestionFiveScore(parseInt(event.target.value));
   };
 
   const handleQuizFormSubmit = (event) => {

@@ -76,11 +76,12 @@ const QuizForm = ({ getQuizResult, findFact }) => {
   };
   findFact();
   getQuizResult(totalScore);
+
+  const addData = () => {
+    setResultData();
+  }
+
   
-  
-const addData = () => {
-  setResultData();
-}
   const handleCheckBoxChange = (item, setItem, question, setQuestion) => {
     if (item === false) {
       setItem(true);
@@ -444,7 +445,7 @@ const addData = () => {
       {quizFormComplete ? (
         <h2>Thank you for taking the quiz. Here are your results:</h2>
       ) : null}
-      <button onClick={addData}><a href="/leaderboard">Click here to log your results and add your score to the leaderboard</a></button>
+      {quizFormComplete ? <button onClick={addData}><a href="/leaderboard">Click here to log your results and add your score to the leaderboard</a></button>: null}
     </div>
   );
 };

@@ -49,7 +49,7 @@ const QuizContainer = () => {
   const getQuizResult = (result) => {
     setQuizResult(result);
   };
-
+  
   console.log(quizResult);
 
   return (
@@ -60,7 +60,7 @@ const QuizContainer = () => {
           Your result is {quizResult}. 
           {header}
           {fact}
-          Your emissions are the equivalent of the average person in {countryScore[0].name}. <a href="/countries" >See where {countryScore[0].name} ranks compared to other countries. </a>
+          Your emissions are the equivalent of the average person in {countryScore[0].name}. <a href="/countries" >See where {countryScore[0].name} ranks compared to other countries.</a>
         </h2>
       ) : null}
     </div>

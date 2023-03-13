@@ -4,6 +4,29 @@ import { useState, useEffect } from "react";
 
 const CountryList = () => {
   const [countries, setCountries] = useState([]);
+  const [filteredCountries, setFilteredCountries] = useState([]);
+
+  const filterCountries = (input) => {
+    const filteredNodes = countries.filter((country) => {
+      return country.name.toLowerCase().includes(input.toLowerCase());
+    });
+    setFilteredCountries(filteredNodes);
+    if (input === "") {
+      setFilteredCountries([]);
+    }
+  };
+
+  const handleFilterCountries = (event) => {
+    filterCountries(event.target.value);
+  };
+
+  let spheres;
+
+  if (filteredCountries.length > 0) {
+    spheres = filteredCountries;
+  } else {
+    spheres = countries;
+  }
 
   useEffect(() => {
     getCountries().then((allCountries) => {
@@ -11,20 +34,27 @@ const CountryList = () => {
     });
   }, []);
   console.log(countries);
-  const countryNodes = countries.map((country, index) => {
+  const countryNodes = spheres.map((country, index) => {
     return <Country key={index} country={country} />;
   });
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Country</th>
-          <th>Emissions (tonnes)</th>
-          <th>Emissions per Capita</th>
-        </tr>
-      </thead>
-      <tbody>{countryNodes}</tbody>
-    </table>
+    <div>
+      <input
+        type="text"
+        placeholder="Filter Countries"
+        onChange={handleFilterCountries}
+      />
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Emissions (tonnes)</th>
+            <th>Emissions per Capita</th>
+          </tr>
+        </thead>
+        <tbody>{countryNodes}</tbody>
+      </table>
+    </div>
   );
 };
 

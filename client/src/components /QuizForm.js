@@ -22,16 +22,11 @@ const QuizForm = ({ getQuizResult, findFact }) => {
   const [loft, setLoft] = useState(false);
   const [solar, setSolar] = useState(false);
   const [boiler, setBoiler] = useState(false);
-  const [formData, setFormData] = useState(
-    {
-      name: "",
-      score: 0,
-      country: ""
-}
-  );
-
-
-  
+  const [formData, setFormData] = useState({
+    name: "",
+    score: 0,
+    country: "",
+  });
 
   const handleUserNameChange = (event) => {
     setName(event.target.value);
@@ -82,6 +77,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
   findFact();
   getQuizResult(totalScore);
   
+  
 const addData = () => {
   setResultData();
 }
@@ -103,7 +99,8 @@ const addData = () => {
     <div>
       {detailsFormComplete ? (
         <h2>
-          Hello {name} from {country}. {quizFormComplete ? <p></p>: <p>Please begin the quiz below.</p>}
+          Hello {name} from {country}.{" "}
+          {quizFormComplete ? <p></p> : <p>Please begin the quiz below.</p>}
         </h2>
       ) : (
         <form onSubmit={handleUserDetailsSubmit}>
@@ -449,7 +446,6 @@ const addData = () => {
       ) : null}
       <button onClick={addData}><a href="/leaderboard">Click here to log your results and add your score to the leaderboard</a></button>
     </div>
-    
   );
 };
 export default QuizForm;

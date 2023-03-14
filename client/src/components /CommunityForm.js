@@ -6,19 +6,21 @@ const CommunityForm = () => {
   const [message, setMessage] = useState("");
   const [created, setCreated] = useState("");
   const [category, setCategory] = useState("");
+  const date = new Date();
+  const today =
+    date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
 
-
-
-
-  console.log(created);
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
   const handleMessageChange = (event) => {
     setMessage(event.target.value);
   };
-  const handleNoticeSubmit = () => {
-    setCreated();
+
+  useEffect(() => {
+    setCreated(date);
+  }, []);
+  const handleNoticeSubmit = (event) => {
     postNotice({
       name: name,
       message: message,
@@ -36,6 +38,8 @@ const CommunityForm = () => {
           <option value="Lifestyle">Lifestyle</option>
           <option value="Transport">Transport</option>
           <option value="Advice">Advice</option>
+          <option value="Household">Household</option>
+          <option value="Other">Other</option>
         </select>
         <input className='input' type="text" placeholder="name" onChange={handleNameChange} />
         <textarea className='input' placeholder="message" onChange={handleMessageChange} />

@@ -13,14 +13,18 @@ const Notice = ({ notice }) => {
   return (
     <div className="community-post">
       <h3>{notice.name}</h3>
+      <div className="flex-post">
       <p>{notice.message}</p>
       <p>{notice.category}</p>
       <p>
         {day}-{month}-{year}
       </p>
+      
       <form onSubmit={noticeDelete}>
-        <button>Delete</button>
+        <button >Remove</button>
       </form>
+      </div>
+      
     </div>
   );
 };

@@ -124,7 +124,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
           />
           <br/>
 
-          <input className="button" type="submit" />
+          <input className="button" type="submit" value="Start Quiz"/>
 
         </form>
       )}
@@ -455,7 +455,6 @@ const QuizForm = ({ getQuizResult, findFact }) => {
         <>
         <button className='log-score-button' onClick={addData} ><a href="/leaderboard" target='_blank'>Log results and add your score to the leaderboard</a></button>
       </>) : null}
-      {quizFormComplete ? <button onClick={addData}><a href="/leaderboard">Click here to log your results and score our Leaderboard</a></button>: null}
 
     </div>
   );

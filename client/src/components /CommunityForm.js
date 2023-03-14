@@ -33,7 +33,9 @@ const CommunityForm = () => {
   };
   return (
     <div className="community-form-wrapper">
+   <div className="tip-header-wrapper"> <h2>Post Your Top Tips</h2></div>
       <form  className="community-form" onSubmit={handleNoticeSubmit}>
+        <div>
         <select className='dropdown' onChange={handleCategoryChange}>
           <option value="Lifestyle">Lifestyle</option>
           <option value="Transport">Transport</option>
@@ -42,8 +44,11 @@ const CommunityForm = () => {
           <option value="Other">Other</option>
         </select>
         <input className='input' type="text" placeholder="name" onChange={handleNameChange} />
-        <textarea className='input' placeholder="message" onChange={handleMessageChange} />
-        <input type="submit" />
+        </div>
+        <div>
+        <textarea className='text-box' placeholder="message" onChange={handleMessageChange} />
+        </div>
+        <input className="post-button" type="submit" value="Post"/>
       </form>
     </div>
   );

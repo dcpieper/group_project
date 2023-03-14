@@ -17,7 +17,7 @@ const HomepageContainer = () => {
 <p>What are you waiting for?</p>
 </div>
 <div className='quiz-link'>
-    <p><a href='/quiz'>Start Quiz</a></p>
+   <a href='/quiz'>Start Quiz</a>
     </div>
     </div>
     </div>

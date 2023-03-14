@@ -5,7 +5,7 @@ const HomepageContainer = () => {
   return (
   <div className='homepage-container'>
   <div></div>
-    <h2><a href='/quiz'>Start Quiz</a></h2>
+    <h2><a href='/quiz'>Start Quiz :)</a></h2>
     </div>
 
   )

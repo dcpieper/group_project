@@ -5,7 +5,7 @@ const Notice = ({ notice }) => {
     deleteNotice(notice._id);
   };
   return (
-    <div>
+    <div className="community-post">
       <h3>{notice.name}</h3>
       <p>{notice.message}</p>
       <form onSubmit={noticeDelete}>

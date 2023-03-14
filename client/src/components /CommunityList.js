@@ -11,7 +11,9 @@ const CommunityList = () => {
   const noticeNodes = notices.map((notice, index) => {
     return <Notice key={index} notice={notice} />;
   });
-  return <div>{noticeNodes}</div>;
+  return(
+  <div className="community-list-background">
+  <div className="community-list">{noticeNodes}</div></div>);
 };
 
 export default CommunityList;

@@ -63,7 +63,6 @@ const QuizContainer = () => {
           Your emissions are the equivalent of the average person in {countryScore[0].name}. <a href="/countries" >See where {countryScore[0].name} ranks compared to other countries.</a>
         </h2>
       ) : null}
-      <img src='../../images/earthfire.jpeg'/>
     </div>
   );
 };

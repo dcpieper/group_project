@@ -9,12 +9,14 @@ import CountriesContainer from "./containers /CountriesContainer";
 import QuizContainer from "./containers /QuizContainer";
 import LeaderboardContainer from "./containers /LeaderboardContainer";
 import CommunityContainer from "./containers /CommunityContainer";
+import Opening from "./components /Opening";
 
 function App() {
   return (
     <div className="full-container">
-    <div className="opening-background"><img src='../../images/earthgif4.gif'/></div>
+
     <Router>
+         <Opening />
       <NavBar />
       <Routes>
         <Route path="/" element={<HomepageContainer />} />

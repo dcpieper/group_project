@@ -18,7 +18,7 @@ const CommunityForm = () => {
     });
   };
   return (
-    <div>
+    <div className="community-form">
       <form onSubmit={handleNoticeSubmit}>
         <input type="text" placeholder="name" onChange={handleNameChange} />
         <textarea placeholder="message" onChange={handleMessageChange} />

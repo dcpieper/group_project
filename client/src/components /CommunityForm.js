@@ -32,8 +32,8 @@ const CommunityForm = () => {
     setCategory(event.target.value);
   };
   return (
-    <div className="community-form">
-      <form onSubmit={handleNoticeSubmit}>
+    <div className="community-form-wrapper">
+      <form  className="community-form" onSubmit={handleNoticeSubmit}>
         <select className='dropdown' onChange={handleCategoryChange}>
           <option value="Lifestyle">Lifestyle</option>
           <option value="Transport">Transport</option>

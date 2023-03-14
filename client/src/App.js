@@ -14,6 +14,7 @@ import CommunityContainer from "./containers /CommunityContainer";
 function App() {
   return (
     <>
+
     <div className="full-container">
     <Router>
       <NavBar />

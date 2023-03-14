@@ -97,11 +97,13 @@ const QuizForm = ({ getQuizResult, findFact }) => {
   console.log(questionFiveScore);
 
   return (
+
     <div className="quiz-form">
       {detailsFormComplete ? (
         <h2>
           Hello <span className="capitalise">{name}</span> from <span className="capitalise">{country}</span>.{" "}
           {quizFormComplete ? <p></p> : <p>Answer the questions below to see how much you help our planet.</p>}
+
         </h2>
       ) : (
         <form className='detail-form' onSubmit={handleUserDetailsSubmit}>
@@ -111,6 +113,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
             type="text"
             placeholder="name"
             name="name"
+            className="text-input"
           />
           <input
           className="text-input"
@@ -118,14 +121,18 @@ const QuizForm = ({ getQuizResult, findFact }) => {
             type="text"
             placeholder="country"
             name="country"
+            className="text-input"
           />
           <br/>
+
           <input className="button" type="submit" />
+
         </form>
       )}
 
       {!quizFormComplete && detailsFormComplete ? (
         <form className="quiz-questions" onSubmit={handleQuizFormSubmit}>
+
           <div>
             <h4>1. What type of transport do you use?</h4>
             <label htmlFor="walk">Walk</label>

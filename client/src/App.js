@@ -12,9 +12,10 @@ import CommunityContainer from "./containers /CommunityContainer";
 
 function App() {
   return (
+    <div className="full-container">
+    <div className="opening-background"><img src='../../images/earthgif4.gif'/></div>
     <Router>
       <NavBar />
-      <Header />
       <Routes>
         <Route path="/" element={<HomepageContainer />} />
         <Route path="/quiz" element={<QuizContainer />} />
@@ -24,6 +25,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    </div>
   );
 }
 

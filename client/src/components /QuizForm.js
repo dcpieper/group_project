@@ -97,35 +97,44 @@ const QuizForm = ({ getQuizResult, findFact }) => {
   console.log(questionFiveScore);
 
   return (
-    <div>
+
+    <div className="quiz-form">
       {detailsFormComplete ? (
         <h2>
-          Hello {name} from {country}.{" "}
-          {quizFormComplete ? <p></p> : <p>Please begin the quiz below.</p>}
+          Hello <span className="capitalise">{name}</span> from <span className="capitalise">{country}</span>.{" "}
+          {quizFormComplete ? <p></p> : <p>Answer the questions below to see how much you help our planet.</p>}
+
         </h2>
       ) : (
-        <form onSubmit={handleUserDetailsSubmit}>
+        <form className='detail-form' onSubmit={handleUserDetailsSubmit}>
           <h4>Please enter your details below to begin the quiz:</h4>
-          <input
+          <input className="text-input"
             onChange={handleUserNameChange}
             type="text"
             placeholder="name"
             name="name"
+            className="text-input"
           />
           <input
+          className="text-input"
             onChange={handleUserCountryChange}
             type="text"
             placeholder="country"
             name="country"
+            className="text-input"
           />
-          <input type="submit" />
+          <br/>
+
+          <input className="button" type="submit" />
+
         </form>
       )}
 
       {!quizFormComplete && detailsFormComplete ? (
-        <form onSubmit={handleQuizFormSubmit}>
+        <form className="quiz-questions" onSubmit={handleQuizFormSubmit}>
+
           <div>
-            <h4>What type of transport do you use?</h4>
+            <h4>1. What type of transport do you use?</h4>
             <label htmlFor="walk">Walk</label>
             <input
               type="radio"
@@ -174,7 +183,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
           </div>
 
           <div>
-            <h4>How much meat do you eat?</h4>
+            <h4>2. How much meat do you eat?</h4>
             <label htmlFor="never">Never eat meat or dairy</label>
             <input
               type="radio"
@@ -223,7 +232,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
           </div>
 
           <div>
-            <h4>What do you recycle?</h4>
+            <h4>3. What do you recycle?</h4>
             <label htmlFor="glass">Glass</label>
             <input
               type="checkbox"
@@ -306,7 +315,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
           </div>
 
           <div>
-            <h4>How much on average do you spend on electronics per month?</h4>
+            <h4>4. How much on average do you spend on electronics per month?</h4>
             <label htmlFor="zero">£0-£25</label>
             <input
               type="radio"
@@ -355,7 +364,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
           </div>
 
           <div>
-            <h4>What do you have in your home?</h4>
+            <h4>5. What energy-saving features do you have in your home?</h4>
             <label htmlFor="double">Double glazing</label>
             <input
               type="checkbox"

@@ -229,6 +229,11 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
     background-color: ghostwhite;
   
 }
+.welcome{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 900;
+}
 .capitalise {
   text-transform: capitalize;
 }
@@ -254,6 +259,69 @@ margin: 0 auto;
   display: block;
   margin: 0 auto;
 }
+.log-score-button{
+  width: 700px;
+  height: 60px;
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+
+}
+.log-score-button a {
+  font-size: 25px;
+  color: rgb(166, 91, 0);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.log-score-button a:hover {
+  background-color: rgb(228, 133, 17);
+  color: white;
+
+
+}
+.result{
+text-align: center;
+font-size: 30px;
+}
+.result-header{
+text-align: center;
+font-size: 25px;
+font-weight: 800;
+letter-spacing: 1px;
+padding: 5px;
+}
+.result-fact{
+text-align: center;
+font-size: 25px;
+line-height: 35px;
+
+}
+.result-emissions{
+  padding: 10px;
+text-align: center;
+font-size: 25px;
+}
+.result-link{
+text-align: center;
+}
+.result-link a {
+font-size: 29px;
+color: rgb(166, 91, 0);
+text-decoration: none;
+padding: 10px;
+border-radius: 20px;
+}
+.result-link a:hover {
+  background-color: rgb(228, 133, 17);
+  color: white;
+
+
+}
 
 .community-container{
 width: 100%;
@@ -266,18 +334,27 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
   flex-direction: row wrap;
   justify-content: center;
 }
+.community-form-wrapper{
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
 .community-form{
   width: 70%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
+  background-color: black;
+  padding: 10px;
 
 }
 .community-form .input{
   width: 300px;
   height: 40px;
+  border-radius: 5px;
+  border: 1px solid ghostwhite;
+  font-size: 18px;
 }
 .community-form .dropdown{
   width: 200px;

@@ -14,7 +14,7 @@ import Opening from "./components /Opening";
 function App() {
   return (
     <>
-    <Opening />
+    {/* <Opening /> */}
     <div className="full-container">
     <Router>
       <NavBar />

@@ -57,13 +57,14 @@ const QuizContainer = () => {
     <div className="quiz-form">
       <QuizForm getQuizResult={getQuizResult} findFact={findFact}/>
       {quizResult ? (
-        <h2>
-          Your result is {quizResult}. 
-          {header}
-          {fact}
-          Your emissions are the equivalent of the average person in {countryScore[0].name}. <a href="/countries" >See where {countryScore[0].name} ranks compared to other countries.</a>
-        </h2>
-      ) : null}
+        <>
+        <p className="result">
+          Your result is {quizResult}. </p>
+          <p className="result-header">{header}</p>
+          <p className="result-fact">{fact}</p>
+          <p className="result-emissions">Your emissions are the equivalent of the average person in {countryScore[0].name}.</p>
+          <p className="result-link"><a href="/countries" >See where {countryScore[0].name} ranks compared to other countries.</a></p>
+      </>) : null}
       </div>
     </div>
   );

@@ -100,11 +100,11 @@ const QuizForm = ({ getQuizResult, findFact }) => {
 
     <div className="quiz-form-details">
       {detailsFormComplete ? (
-        <h2>
-          Hello <span className="capitalise">{name}</span> from <span className="capitalise">{country}</span>.{" "}
+        <p className="welcome">
+          Hi <span className="capitalise">{name}</span> from <span className="capitalise">{country}</span>,{" "}
           {quizFormComplete ? <p></p> : <p>Answer the questions below to see how much you help our planet.</p>}
 
-        </h2>
+        </p>
       ) : (
         <form className='detail-form' onSubmit={handleUserDetailsSubmit}>
           <p>Please enter your details below to begin the quiz:</p>
@@ -450,9 +450,10 @@ const QuizForm = ({ getQuizResult, findFact }) => {
         </form>
       ) : null}
       {quizFormComplete ? (
-        <h2>Thank you for taking the quiz. Here are your results:</h2>
-      ) : null}
-      {quizFormComplete ? <button onClick={addData}><a href="/leaderboard">Click here to log your results and add your score to the leaderboard</a></button>: null}
+        <>
+        <button className='log-score-button' onClick={addData} ><a href="/leaderboard" target='_blank'>Log results and add your score to the leaderboard</a></button>
+      </>) : null}
+
     </div>
   );
 };

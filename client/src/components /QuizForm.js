@@ -100,9 +100,10 @@ const QuizForm = ({ getQuizResult, findFact }) => {
 
     <div className="quiz-form-details">
       {detailsFormComplete ? (
+
         <p className="welcome">
-          Hi <span className="capitalise">{name}</span> from <span className="capitalise">{country}</span>,{" "}
-          {quizFormComplete ? <p></p> : <p>Answer the questions below to see how much you help our planet.</p>}
+          Hello <span className="capitalise">{name}</span> from <span className="capitalise">{country}</span>.{" "}
+          {quizFormComplete ? <p></p> : <p>You're invited to our quiz, which will display how much you help our planet.</p>}
 
         </p>
       ) : (
@@ -132,7 +133,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
         <form className="quiz-questions" onSubmit={handleQuizFormSubmit}>
 
           <div>
-            <h4>1. What type of transport do you use?</h4>
+            <h4>1. What type of transport do you use the most?</h4>
             <label htmlFor="walk">Walk</label>
             <input
               type="radio"
@@ -182,7 +183,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
 
           <div>
             <h4>2. How much meat do you eat?</h4>
-            <label htmlFor="never">Never eat meat or dairy</label>
+            <label htmlFor="never">I don’t eat meat or dairy</label>
             <input
               type="radio"
               name="question2"
@@ -192,7 +193,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
               required
             />
 
-            <label htmlFor="nevermeat">Never eat meat</label>
+            <label htmlFor="nevermeat">I never have meat</label>
             <input
               type="radio"
               name="question2"
@@ -201,7 +202,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
               onChange={handleQuestionTwo}
             />
 
-            <label htmlFor="sometimes">I sometimes eat meat</label>
+            <label htmlFor="sometimes">I eat meat sometimes</label>
             <input
               type="radio"
               name="question2"
@@ -210,7 +211,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
               onChange={handleQuestionTwo}
             />
 
-            <label htmlFor="mostly">I mostly eat meals during meals</label>
+            <label htmlFor="mostly">I mostly eat meat during meals</label>
             <input
               type="radio"
               name="question2"
@@ -450,9 +451,11 @@ const QuizForm = ({ getQuizResult, findFact }) => {
         </form>
       ) : null}
       {quizFormComplete ? (
+
         <>
         <button className='log-score-button' onClick={addData} ><a href="/leaderboard" target='_blank'>Log results and add your score to the leaderboard</a></button>
       </>) : null}
+      {quizFormComplete ? <button onClick={addData}><a href="/leaderboard">Click here to log your results and score our Leaderboard</a></button>: null}
 
     </div>
   );

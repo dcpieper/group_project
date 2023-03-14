@@ -79,4 +79,4 @@ For the website?
 
 Needs to be intellectual and be cool and attractive for people like Ellie to advertise to her family and friends. 
 
-With her busy schedule. Small tips to downgrade her carbon footprint. 
+Small tips to downgrade her carbon footprint to coincide with her busy schedule.

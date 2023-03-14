@@ -22,15 +22,22 @@ db.results.insertMany([
 db.noticeBoard.insertMany([
         {
                 name: "Jane Bennet",
-                message: "I like to make most of my trips by foot."
+                message: "I like to make most of my trips by foot.",
+                created: "11/03/2020",
+                category: "Advice"
+
         },
         {
                 name: "Smeagol",
-                message: "It's my birthday"
+                message: "It's my birthday",
+                created: "11/03/2020",
+                category: "Transport"
         },
         {
                 name: "Gollum",
-                message: "My precious"
+                message: "My precious",
+                created: "11/03/2020",
+                category: "Lifestyle"
         }
 ])
 

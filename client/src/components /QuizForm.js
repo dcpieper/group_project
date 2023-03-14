@@ -107,7 +107,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
         </h2>
       ) : (
         <form className='detail-form' onSubmit={handleUserDetailsSubmit}>
-          <h4>Please enter your details below to begin the quiz:</h4>
+          <p>Please enter your details below to begin the quiz:</p>
           <input className="text-input"
             onChange={handleUserNameChange}
             type="text"
@@ -444,8 +444,8 @@ const QuizForm = ({ getQuizResult, findFact }) => {
             />
           </div>
 
-          <div>
-            <input type="submit"></input>
+          <div className="quiz-submit">
+            <input  type="submit"></input>
           </div>
         </form>
       ) : null}

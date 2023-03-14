@@ -22,7 +22,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
   const [loft, setLoft] = useState(false);
   const [solar, setSolar] = useState(false);
   const [boiler, setBoiler] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({git 
     name: "",
     score: 0,
     country: "",

@@ -10,6 +10,7 @@ import QuizContainer from "./containers /QuizContainer";
 import LeaderboardContainer from "./containers /LeaderboardContainer";
 import CommunityContainer from "./containers /CommunityContainer";
 
+
 function App() {
   return (
     <>
@@ -24,7 +25,6 @@ function App() {
         <Route path="/countries" element={<CountriesContainer />} />
         <Route path="/leaderboard" element={<LeaderboardContainer />} />
       </Routes>
-      <Footer />
     </Router>
     </div>
     </>

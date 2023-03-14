@@ -29,10 +29,10 @@ const QuizForm = ({ getQuizResult, findFact }) => {
   });
 
   const handleUserNameChange = (event) => {
-    setName(event.target.value);
+    setName((event.target.value).charAt(0).toUpperCase() + (event.target.value).slice(1));
   };
   const handleUserCountryChange = (event) => {
-    setCountry(event.target.value);
+    setCountry((event.target.value).charAt(0).toUpperCase() + (event.target.value).slice(1));
   };
 
   const handleUserDetailsSubmit = (event) => {

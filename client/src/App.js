@@ -13,9 +13,10 @@ import Opening from "./components /Opening";
 
 function App() {
   return (
+    <>
+    <Opening />
     <div className="full-container">
     <Router>
-         <Opening />
       <NavBar />
       <Routes>
         <Route path="/" element={<HomepageContainer />} />
@@ -27,6 +28,7 @@ function App() {
       <Footer />
     </Router>
     </div>
+    </>
   );
 }
 

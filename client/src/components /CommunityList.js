@@ -37,13 +37,13 @@ const CommunityList = () => {
   });
 
   return (
-    <div>
+    <div className="community-list-container">
       <select onChange={handleFilterNotices}>
         <option value="Lifestyle">Lifestyle</option>
         <option value="Transport">Transport</option>
         <option value="Advice">Advice</option>
       </select>
-      <div>{noticeNodes}</div>
+      <div className="community-list">{noticeNodes}</div>
     </div>
   );
 

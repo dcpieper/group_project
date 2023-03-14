@@ -32,13 +32,13 @@ const CommunityForm = () => {
   return (
     <div className="community-form">
       <form onSubmit={handleNoticeSubmit}>
-        <select onChange={handleCategoryChange}>
+        <select className='dropdown' onChange={handleCategoryChange}>
           <option value="Lifestyle">Lifestyle</option>
           <option value="Transport">Transport</option>
           <option value="Advice">Advice</option>
         </select>
-        <input type="text" placeholder="name" onChange={handleNameChange} />
-        <textarea placeholder="message" onChange={handleMessageChange} />
+        <input className='input' type="text" placeholder="name" onChange={handleNameChange} />
+        <textarea className='input' placeholder="message" onChange={handleMessageChange} />
         <input type="submit" />
       </form>
     </div>

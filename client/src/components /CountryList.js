@@ -38,12 +38,14 @@ const CountryList = () => {
     return <Country key={index} country={country} />;
   });
   return (
-    <div>
+    <div className="country-list">
+    <div className="input-container">
       <input
         type="text"
         placeholder="Filter Countries"
         onChange={handleFilterCountries}
       />
+      </div>
       <table>
         <thead>
           <tr>

@@ -98,7 +98,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
 
   return (
 
-    <div className="quiz-form">
+    <div className="quiz-form-details">
       {detailsFormComplete ? (
         <h2>
           Hello <span className="capitalise">{name}</span> from <span className="capitalise">{country}</span>.{" "}
@@ -107,13 +107,12 @@ const QuizForm = ({ getQuizResult, findFact }) => {
         </h2>
       ) : (
         <form className='detail-form' onSubmit={handleUserDetailsSubmit}>
-          <h4>Please enter your details below to begin the quiz:</h4>
+          <p>Please enter your details below to begin the quiz:</p>
           <input className="text-input"
             onChange={handleUserNameChange}
             type="text"
             placeholder="name"
             name="name"
-            className="text-input"
           />
           <input
           className="text-input"
@@ -121,7 +120,6 @@ const QuizForm = ({ getQuizResult, findFact }) => {
             type="text"
             placeholder="country"
             name="country"
-            className="text-input"
           />
           <br/>
 
@@ -446,8 +444,8 @@ const QuizForm = ({ getQuizResult, findFact }) => {
             />
           </div>
 
-          <div>
-            <input type="submit"></input>
+          <div className="quiz-submit">
+            <input  type="submit"></input>
           </div>
         </form>
       ) : null}

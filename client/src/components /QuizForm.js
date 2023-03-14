@@ -56,12 +56,12 @@ const QuizForm = ({ getQuizResult, findFact }) => {
     formData.score = totalScore;
     setFormData(formData);
     postResult(formData);
-    setFormData( {
+    setFormData({
       name: "",
       score: 0,
-      country: ""
-});
-  }
+      country: "",
+    });
+  };
 
   const handleQuizFormSubmit = (event) => {
     event.preventDefault();
@@ -71,17 +71,16 @@ const QuizForm = ({ getQuizResult, findFact }) => {
         questionThreeScore +
         questionFourScore +
         questionFiveScore
-    )
-    setQuizFormComplete(true); 
+    );
+    setQuizFormComplete(true);
   };
   findFact();
   getQuizResult(totalScore);
 
   const addData = () => {
     setResultData();
-  }
+  };
 
-  
   const handleCheckBoxChange = (item, setItem, question, setQuestion) => {
     if (item === false) {
       setItem(true);
@@ -97,18 +96,24 @@ const QuizForm = ({ getQuizResult, findFact }) => {
   console.log(questionFiveScore);
 
   return (
-
     <div className="quiz-form">
       {detailsFormComplete ? (
         <h2>
-          Hello <span className="capitalise">{name}</span> from <span className="capitalise">{country}</span>.{" "}
-          {quizFormComplete ? <p></p> : <p>Answer the questions below to see how much you help our planet.</p>}
-
+          Hello <span className="capitalise">{name}</span> from{" "}
+          <span className="capitalise">{country}</span>.{" "}
+          {quizFormComplete ? (
+            <p></p>
+          ) : (
+            <p>
+              Answer the questions below to see how much you help our planet.
+            </p>
+          )}
         </h2>
       ) : (
-        <form className='detail-form' onSubmit={handleUserDetailsSubmit}>
+        <form className="detail-form" onSubmit={handleUserDetailsSubmit}>
           <h4>Please enter your details below to begin the quiz:</h4>
-          <input className="text-input"
+          <input
+            className="text-input"
             onChange={handleUserNameChange}
             type="text"
             placeholder="name"
@@ -116,23 +121,21 @@ const QuizForm = ({ getQuizResult, findFact }) => {
             className="text-input"
           />
           <input
-          className="text-input"
+            className="text-input"
             onChange={handleUserCountryChange}
             type="text"
             placeholder="country"
             name="country"
             className="text-input"
           />
-          <br/>
+          <br />
 
           <input className="button" type="submit" />
-
         </form>
       )}
 
       {!quizFormComplete && detailsFormComplete ? (
         <form className="quiz-questions" onSubmit={handleQuizFormSubmit}>
-
           <div>
             <h4>1. What type of transport do you use?</h4>
             <label htmlFor="walk">Walk</label>
@@ -174,6 +177,7 @@ const QuizForm = ({ getQuizResult, findFact }) => {
 
             <label htmlFor="walk">Plane</label>
             <input
+              id="plane-btn"
               type="radio"
               name="question1"
               htmlFor="plane"
@@ -315,7 +319,9 @@ const QuizForm = ({ getQuizResult, findFact }) => {
           </div>
 
           <div>
-            <h4>4. How much on average do you spend on electronics per month?</h4>
+            <h4>
+              4. How much on average do you spend on electronics per month?
+            </h4>
             <label htmlFor="zero">£0-£25</label>
             <input
               type="radio"
@@ -454,7 +460,13 @@ const QuizForm = ({ getQuizResult, findFact }) => {
       {quizFormComplete ? (
         <h2>Thank you for taking the quiz. Here are your results:</h2>
       ) : null}
-      {quizFormComplete ? <button onClick={addData}><a href="/leaderboard">Click here to log your results and add your score to the leaderboard</a></button>: null}
+      {quizFormComplete ? (
+        <button onClick={addData}>
+          <a href="/leaderboard">
+            Click here to log your results and add your score to the leaderboard
+          </a>
+        </button>
+      ) : null}
     </div>
   );
 };

@@ -4,7 +4,7 @@ import Notice from "./Notice";
 const CommunityList = () => {
   const [notices, setNotices] = useState([]);
   const [filteredNotices, setFilteredNotices] = useState([]);
-  console.log(filteredNotices);
+
   const filterNotices = (input) => {
     const filteredNodes = notices.filter((notice) => {
       return notice.category === input;
@@ -32,6 +32,11 @@ const CommunityList = () => {
       setNotices(allNotices);
     });
   }, []);
+
+  notices.sort((a,b) => {
+    return new Date(b.created) - new Date(a.created);
+  });
+
   const noticeNodes = noticeResults.map((notice, index) => {
     return <Notice key={index} notice={notice} />;
   });
@@ -42,6 +47,8 @@ const CommunityList = () => {
         <option value="Lifestyle">Lifestyle</option>
         <option value="Transport">Transport</option>
         <option value="Advice">Advice</option>
+        <option value="Household">Household</option>
+        <option value="Other">Other</option>
       </select>
       <div>{noticeNodes}</div>
     </div>

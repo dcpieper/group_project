@@ -20,25 +20,33 @@ db.results.insertMany([
 ]);
 
 db.noticeBoard.insertMany([
+        
         {
                 name: "Jane Bennet",
                 message: "I like to make most of my trips by foot.",
-                created: "11/03/2020",
+                created: new Date("03-11-2020"),
                 category: "Advice"
 
         },
         {
+                name: "iuyiuy",
+                message: "My precious",
+                created: new Date("02-02-2023"),
+                category: "Lifestyle"
+        },
+        {
                 name: "Smeagol",
                 message: "It's my birthday",
-                created: "11/03/2020",
+                created: new Date("12-01-2020"),
                 category: "Transport"
         },
         {
                 name: "Gollum",
                 message: "My precious",
-                created: "11/03/2020",
+                created: new Date("11-02-2020"),
                 category: "Lifestyle"
-        }
+        },
+       
 ])
 
 db.countries.insertMany([

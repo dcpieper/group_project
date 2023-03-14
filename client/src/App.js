@@ -9,12 +9,12 @@ import CountriesContainer from "./containers /CountriesContainer";
 import QuizContainer from "./containers /QuizContainer";
 import LeaderboardContainer from "./containers /LeaderboardContainer";
 import CommunityContainer from "./containers /CommunityContainer";
-import Opening from "./components /Opening";
+
 
 function App() {
   return (
     <>
-    {/* <Opening /> */}
+
     <div className="full-container">
     <Router>
       <NavBar />
@@ -25,7 +25,6 @@ function App() {
         <Route path="/countries" element={<CountriesContainer />} />
         <Route path="/leaderboard" element={<LeaderboardContainer />} />
       </Routes>
-      <Footer />
     </Router>
     </div>
     </>

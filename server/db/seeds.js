@@ -29,23 +29,47 @@ db.noticeBoard.insertMany([
 
         },
         {
-                name: "iuyiuy",
-                message: "My precious",
-                created: new Date("02-02-2023"),
+                name: "Kris",
+                message: "Before you bin anything – please, check the back of the packaging before placing it in the wrong bin!! It might be plastic or paper, but there’s a chance it might no be recyclable like certain containers for bacon, grapes, film… also you can’t recycle kitchen roll or many coffee cups. It could cause more harm than good. Rinse your products too! Takes a literally a few seconds.",
+                created: new Date("09-18-2022"),
+                category: "Household"
+        }, 
+        {
+                name: "Ellie",
+                message: "I’ve started walking to my work. Feeling fab! ",
+                created: new Date ("01-01-2021"),
                 category: "Lifestyle"
         },
         {
-                name: "Smeagol",
-                message: "It's my birthday",
-                created: new Date("12-01-2020"),
+                name: "Arty", 
+                message: "Because you can’t recycle plastic bags and cartons (such as Pringle boxes, I have a slight addiction) then I have another bin with two separate bin bags; one for plastic bags, which I take to the shop and dump it into the plastic cage. The other, I take to a local point. There’s one beside the Tesco I go too, it’s very handing. Only one trip!",
+                created: new Date("09-12-2021"),
+                category: "Lifestyle"
+        },
+        {
+                name: "Saskia",
+                message: "Switched to my porridge from milk to water. I am stunned! It tastes the same! A lot less calories too.",
+                created: new Date("02-21-2022"),
+                category: "Advice"
+        },
+        {
+                name: "mags",
+                message: "Bought myself a ninja airfryer and it’s the best thing ever! I can cook everything I want with it, and it reduces my energy bills drastically. Thank me later!",
+                created: new Date("11-25-2021"),
+                category: "Household"
+        },
+        {
+                name: "Amir",
+                message: "Mad! Did you know it takes 10910 lites of water to make a 0.5kg piece of steak? Only 114 litres to create 0.5kg of wheat. I’m making some vegan lasagne tonight instead!",
+                created: new Date("12-05-2022"),
+                category: "Advice"
+        },
+        {
+                name: "Kelly",
+                message: "I love travelling and I feel divided to reducing holidays… so happy I can reduce co2 emissions by travelling by the train. Better option and I’ve been able to see the whole of the UK! Going up to Aviemore this Sunday!",
+                created: new Date("07-05-22"), 
                 category: "Transport"
-        },
-        {
-                name: "Gollum",
-                message: "My precious",
-                created: new Date("11-02-2020"),
-                category: "Lifestyle"
-        },
+        }
        
 ])
 

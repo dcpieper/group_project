@@ -35,11 +35,7 @@ const CommunityList = () => {
   const noticeNodes = noticeResults.map((notice, index) => {
     return <Notice key={index} notice={notice} />;
   });
-<<<<<<< HEAD
-  return(
-  <div className="community-list-background">
-  <div className="community-list">{noticeNodes}</div></div>);
-=======
+
   return (
     <div>
       <select onChange={handleFilterNotices}>
@@ -50,7 +46,7 @@ const CommunityList = () => {
       <div>{noticeNodes}</div>
     </div>
   );
->>>>>>> cbf63b3333380e4d4707c80cf50961004d6df334
+
 };
 
 export default CommunityList;

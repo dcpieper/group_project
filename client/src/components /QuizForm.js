@@ -96,7 +96,12 @@ const QuizForm = ({ getQuizResult, findFact }) => {
   console.log(questionFiveScore);
 
   return (
+
     <div className="quiz-form">
+
+
+    <div className="quiz-form-details">
+
       {detailsFormComplete ? (
         <h2>
           Hello <span className="capitalise">{name}</span> from{" "}
@@ -118,7 +123,6 @@ const QuizForm = ({ getQuizResult, findFact }) => {
             type="text"
             placeholder="name"
             name="name"
-            className="text-input"
           />
           <input
             className="text-input"
@@ -126,7 +130,6 @@ const QuizForm = ({ getQuizResult, findFact }) => {
             type="text"
             placeholder="country"
             name="country"
-            className="text-input"
           />
           <br />
 

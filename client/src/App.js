@@ -12,6 +12,8 @@ import CommunityContainer from "./containers /CommunityContainer";
 
 function App() {
   return (
+    <div className="full-container">
+    <div className="opening-background"><img src='../../images/earthgif4.gif'/></div>
     <Router>
       <NavBar />
       <Routes>
@@ -23,6 +25,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    </div>
   );
 }
 

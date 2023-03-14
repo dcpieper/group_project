@@ -50,7 +50,7 @@ const LeaderboardList = () => {
   });
 
   return (
-    <div>
+    <div className="leaderboard">
       <input
         type="text"
         placeholder="Filter Results"

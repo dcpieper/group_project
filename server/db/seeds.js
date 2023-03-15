@@ -16,7 +16,84 @@ db.results.insertMany([
                  name: "King Charles",
                  score: 21,
                  country: "United Kingdom"  
+        },
+        {
+                name: "Bob The Builder",
+                score: 25, 
+                country: "United Kingdom"
+        }, 
+        {
+                name: "Fireman Sam",
+                score: 4,
+                country: "United Kingdom"
+        },
+        {
+                name: "Legolas",
+                score: 2,
+                country: "Northern Mirkwood"
+        }, 
+        {
+                name: "Joel Miller",
+                score: 11,
+                country: "USA"
+        },
+        {
+                name: "Ellie Williams",
+                score: 9,
+                country: "USA"
+        },
+        {
+                name: "Batman",
+                score: 16,
+                country: "n/a"
+
+        },
+        {
+                name: "Sharon Osbourne",
+                score: 22,
+                country: "United Kingdom"
+        }, 
+        {
+                name: "Lara Croft",
+                score: 16,
+                country: "United Kingdom"
+        },
+        {
+                name: "Kris",
+                score: 9,
+                country: "Scotland"
+        },
+        {
+                name: "Ellie",
+                score: 12,
+                country: "Scotland"
+        },
+        {
+                name: "Arty",
+                score: 5,
+                country: "Scotland"
+        },
+        {
+                name: "Saskia",
+                score: 11, 
+                country: "Germany"
+        }, 
+        {
+                name: "Mags",
+                score: 15,
+                country: "England"
+        },
+        {
+                name: "Amir",
+                score: 19,
+                country: "Morocco"
+        },
+        {
+                name: "Kelly",
+                score: 20,
+                country: "United Kingdom"
         }
+
 ]);
 
 db.noticeBoard.insertMany([
@@ -53,7 +130,7 @@ db.noticeBoard.insertMany([
                 category: "Advice"
         },
         {
-                name: "mags",
+                name: "Mags",
                 message: "Bought myself a ninja airfryer and it’s the best thing ever! I can cook everything I want with it, and it reduces my energy bills drastically. Thank me later!",
                 created: new Date("11-25-2021"),
                 category: "Household"

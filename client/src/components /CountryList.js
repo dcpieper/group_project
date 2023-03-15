@@ -47,6 +47,7 @@ const CountryList = () => {
       />
       </div>
       <div className="flextest">
+      <div className="country-table">
       <table>
         <thead>
           <tr>
@@ -57,7 +58,10 @@ const CountryList = () => {
         </thead>
         <tbody>{countryNodes}</tbody>
       </table>
+      </div>
+      <div className="country-graph"> 
       <img className='co2-graph' src="/images/co2bycountryfinalfinal.gif" alt='countrygraph'/>
+      </div>
       </div>
     </div>
   );

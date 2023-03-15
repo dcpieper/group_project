@@ -37,6 +37,7 @@ const CommunityForm = () => {
       <form  className="community-form" onSubmit={handleNoticeSubmit}>
         <div>
         <select className='dropdown' onChange={handleCategoryChange}>
+          <option value='Default' selected disabled>Select Category</option>
           <option value="Lifestyle">Lifestyle</option>
           <option value="Transport">Transport</option>
           <option value="Advice">Advice</option>

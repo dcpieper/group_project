@@ -63,7 +63,10 @@ const QuizContainer = () => {
           <p className="result-header">{header}</p>
           <p className="result-fact">{fact}</p>
           <p className="result-emissions">Your emissions are the equivalent of the average person in {countryScore[0].name}.</p>
+          <div className="country-comparison">
+          <img src={countryScore[0].flag.png}/>
           <p className="result-link"><a href="/countries" >See where {countryScore[0].name} ranks compared to other countries.</a></p>
+          </div>
       </>) : null}
       </div>
     </div>

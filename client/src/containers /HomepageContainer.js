@@ -5,6 +5,9 @@ const HomepageContainer = () => {
   return (
   <div className='homepage-container'>
   <div className='homepage-text-container'>
+  <div class='logo-container'>
+    <img src='./images/smeco-logo.png'/>
+  </div>
   <div className='homepage-text'>
     <p>Let's save the arctic from melting. Enjoy the sun rather be cooked by it. Stop animals becoming extinct. Continue to grow our delicious crops. Protect our children's bright futures…</p>
     <p>

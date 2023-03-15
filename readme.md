@@ -1,3 +1,22 @@
+PROJECT BRIEF
+
+Do you want to put an end to feeling worried about climate change, but you don’t want to sacrifice your life too much?
+
+Smeco might be designed for you – an educational app that welcomes you to multiple choice quiz. In this quiz you fill out your everyday life, from what transport you use the most to how much you spend on electronics, etc… 
+After you have finalised your results, we compare you to one of twenty-five countries carbon footprint. Are you comparable to the USA or France?
+
+You’ll be given a rating out of 5, which will moderately point you to were you’re at and if you need to maybe slightly make some adjustments. 
+
+If you’re happy with your result, then you can post it to our Leaderboard. You’ll be ranked alongside other users. 
+
+It doesn’t stop there – 
+
+Select our “Your Tips” page! Here, users can post their own tips and categorise it too (if they wanted to specify if their advice is Household or Lifestyle). If they’re not happy with their advice, they can remove it.
+
+/////////////////////////////////////
+
+INSTRUCTIONS
+
 git checkout -b branch name - creates branch
 git pull - pull from git
 git add . - add to git
@@ -6,6 +25,8 @@ git push origin branch name - push to branch
 git push origin main - push to main
 npm install - install node modules
 
+
+//////////////////////////////////////
 
 CHARACTER BIOS 
 
@@ -80,3 +101,4 @@ For the website?
 Needs to be intellectual and be cool and attractive for people like Ellie to advertise to her family and friends. 
 
 Small tips to downgrade her carbon footprint to coincide with her busy schedule.
+

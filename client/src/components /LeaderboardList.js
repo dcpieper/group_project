@@ -56,11 +56,12 @@ const LeaderboardList = () => {
         placeholder="Filter Results"
         onChange={handleFilterResults}
       />
+      <div className="leaderboard-table">
       <table>
         <thead>
           <tr>
             <th>
-              Score<button onClick={sortScore}>↨</button>
+              Score<button onClick={sortScore}>⇅</button>
             </th>
             <th>Name</th>
             <th>Country</th>
@@ -68,6 +69,7 @@ const LeaderboardList = () => {
         </thead>
         <tbody>{resultNodes}</tbody>
       </table>
+      </div>
     </div>
   );
 };

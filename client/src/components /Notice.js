@@ -15,15 +15,17 @@ const Notice = ({ notice }) => {
       <h3>{notice.name}</h3>
       <div className="flex-post">
       <p>{notice.message}</p>
-      <p>{notice.category}</p>
+      <p>Category: <b>{notice.category}</b></p>
       <p>
         {day}-{month}-{year}
       </p>
-      
+      </div>
+      <div className="delete-button-container">
       <form onSubmit={noticeDelete}>
         <button >Remove</button>
       </form>
       </div>
+      
       
     </div>
   );

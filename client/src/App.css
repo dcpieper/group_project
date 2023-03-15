@@ -507,15 +507,18 @@ border-radius: 10px;
   flex-flow: row wrap;
 }
 .community-post{
-width: 450px;
-height: 450px;
+width: 500px;
+height: 500px;
 background-color: rgba(240, 157, 2, 0.867);
-color: white;
+color: rgb(228, 133, 17);
 text-align: center;
 margin: 15px;
-font-size: 18px;
+font-size: 20px;
 padding: 10px;
 border-radius: 20px;
+}
+.delete-button-container{
+position: relative;
 }
 
 .community-post button {
@@ -528,6 +531,7 @@ border-radius: 20px;
     font-size: 18px;
     display: block;
     margin: 0 auto;
+    margin-top: 20px;
 }
 .community-post button:hover{
   border: 2px solid orange;
@@ -537,12 +541,22 @@ border-radius: 20px;
   display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 75%;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(255, 238, 205);
+    border-radius: 10px;
 
+}
+.flex-post p{
+  margin: 5px;
+  padding: 5px;
 }
 .community-post h3{
 font-size: 25px;
-padding: 0px;
-margin: 10px;
+margin: 15px;
+padding-bottom: 5px;
+color: white;
 
 }
 .country-container{
@@ -584,7 +598,23 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
   text-align: center;
   padding-top: 10px;
 }
+ .co2-graph {
+  padding-top: 50px;
+   width: 800px;
+   height: 600px;
+ }
 
+ .flextest {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+ }
+ .country-table{
+  width: 50%;
+ }
+ .country-graph{
+  width: 50%;
+ }
 .leaderboard-container {
   width: 100%;
   height: 100%;
@@ -641,13 +671,3 @@ footer {
   background-color: rgb(117, 181, 117);
 }
 
-.co2-graph {
-  width: 600px;
-  height: 400px;
-}
-
-.flextest {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-}

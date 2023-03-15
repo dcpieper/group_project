@@ -127,7 +127,20 @@ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' heigh
   margin: 0 auto;
   padding-top: 100px;
 }
+.logo-container{
+  width:40%;
+  background-color: #84C783;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: -60px;
+  margin-bottom: 40px;
+}
+.homepage-text-container img {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
 
+}
 .homepage-text{
   width: 60%;
   margin: 0 auto;

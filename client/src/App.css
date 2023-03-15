@@ -355,8 +355,6 @@ color: white;
   background-color: rgb(228, 133, 17);
   color: white;
   cursor: pointer;
-
-
 }
 .result{
 text-align: center;
@@ -373,7 +371,6 @@ padding: 5px;
 text-align: center;
 font-size: 25px;
 line-height: 35px;
-
 }
 .country-comparison{
   display: flex;
@@ -385,7 +382,7 @@ line-height: 35px;
   height: 70px;
 }
 .result-emissions{
-  padding: 10px;
+padding: 10px;
 text-align: center;
 font-size: 25px;
 }
@@ -400,7 +397,6 @@ padding: 10px;
 border-radius: 20px;
 }
 .result-link a:hover {
-  background-color: rgb(228, 133, 17);
   color: white;
   cursor: pointer;
 

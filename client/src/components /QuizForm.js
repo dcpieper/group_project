@@ -92,10 +92,6 @@ const QuizForm = ({ getQuizResult, findFact }) => {
     }
   };
 
-  console.log(totalScore);
-  console.log(questionThreeScore);
-  console.log(questionFiveScore);
-
   return (
 
     <div className="quiz-form-details">

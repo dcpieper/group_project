@@ -444,7 +444,6 @@ const QuizForm = ({ getQuizResult, findFact }) => {
               }}
             />
           </div>
-
           <div className="quiz-submit">
             <input  type="submit"></input>
           </div>

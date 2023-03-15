@@ -46,6 +46,7 @@ const CountryList = () => {
         onChange={handleFilterCountries}
       />
       </div>
+      <div className="flextest">
       <table>
         <thead>
           <tr>
@@ -56,6 +57,8 @@ const CountryList = () => {
         </thead>
         <tbody>{countryNodes}</tbody>
       </table>
+      <img className='co2-graph' src="/images/co2bycountryfinalfinal.gif" alt='countrygraph'/>
+      </div>
     </div>
   );
 };

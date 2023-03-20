@@ -1,3 +1,7 @@
+![Alt text](images/smeco-logo.png?raw=true "Optional Title")
+
+
+
 PROJECT BRIEF
 
 Do you want to put an end to feeling worried about climate change, but you don’t want to sacrifice your life too much?
